@@ -59,6 +59,16 @@ src/main/java/edu/eci/arsw/blueprints
 - Implementa un nuevo repositorio `PostgresBlueprintPersistence` que reemplace la versión en memoria.  
 - Mantén el contrato de la interfaz `BlueprintPersistence`.  
 
+cree un archivo yml en src/postgres-db que me levanta una base de datos usando docker, comandos que utilice en esta parte:
+
+```
+# levantarlo
+docker compose up -d
+
+# conectarse
+docker exec -it postgres-db psql -U admin -d miapp
+```
+
 ### 3. Buenas prácticas de API REST
 - Cambia el path base de los controladores a `/api/v1/blueprints`.  
 - Usa **códigos HTTP** correctos:  
